@@ -1,0 +1,16 @@
+all:
+  children:
+    linux:
+      hosts:
+        clab-mod2-bgp-lan1:
+          ansible_host: 172.20.20.3
+        clab-mod2-bgp-lan2:
+          ansible_host: 172.20.20.5
+        clab-mod2-bgp-rtrA:
+          ansible_host: 172.20.20.6
+        clab-mod2-bgp-rtrB:
+          ansible_host: 172.20.20.2
+        clab-mod2-bgp-rtrC:
+          ansible_host: 172.20.20.7
+        clab-mod2-bgp-rtrD:
+          ansible_host: 172.20.20.4

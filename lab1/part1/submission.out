@@ -1,0 +1,158 @@
+traceroute to 4.4.4.4 (4.4.4.4), 30 hops max, 60 byte packets
+ 1  10.10.0.1 (10.10.0.1)  0.493 ms  0.102 ms  0.086 ms
+ 2  10.10.1.2 (10.10.1.2)  0.198 ms  0.119 ms  0.109 ms
+ 3  10.10.3.2 (10.10.3.2)  0.157 ms  0.124 ms  0.134 ms
+ 4  4.4.4.4 (4.4.4.4)  0.265 ms  0.145 ms  0.215 ms
+---
+BIRD 2.0.8 ready.
+Table master4:
+1.1.1.0/24           unicast [BtoA 21:38:43.667] * (100) [AS65000i]
+	via 10.10.1.1 on eth1
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65000
+	BGP.next_hop: 10.10.1.1
+	BGP.local_pref: 100
+                     unicast [BtoC 21:38:44.123] (100) [AS65000i]
+	via 10.10.6.1 on eth3
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65002 65000
+	BGP.next_hop: 10.10.6.1
+	BGP.local_pref: 100
+2.2.2.0/24           unicast [BtoD 21:38:43.717] * (100) [AS65003i]
+	via 10.10.3.2 on eth2
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65003
+	BGP.next_hop: 10.10.3.2
+	BGP.local_pref: 100
+                     unicast [BtoC 21:38:47.232] (100) [AS65003i]
+	via 10.10.6.1 on eth3
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65002 65003
+	BGP.next_hop: 10.10.6.1
+	BGP.local_pref: 100
+3.3.3.0/24           unicast [BtoA 21:38:43.667] * (100) [AS65000i]
+	via 10.10.1.1 on eth1
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65000
+	BGP.next_hop: 10.10.1.1
+	BGP.local_pref: 100
+                     unicast [BtoC 21:38:44.123] (100) [AS65000i]
+	via 10.10.6.1 on eth3
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65002 65000
+	BGP.next_hop: 10.10.6.1
+	BGP.local_pref: 100
+4.4.4.0/24           unicast [BtoD 21:38:43.717] * (100) [AS65003i]
+	via 10.10.3.2 on eth2
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65003
+	BGP.next_hop: 10.10.3.2
+	BGP.local_pref: 100
+                     unicast [BtoC 21:38:47.232] (100) [AS65003i]
+	via 10.10.6.1 on eth3
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65002 65003
+	BGP.next_hop: 10.10.6.1
+	BGP.local_pref: 100
+---
+BIRD 2.0.8 ready.
+Table master4:
+1.1.1.0/24           unicast [CtoA 21:38:44.120] * (100) [AS65000i]
+	via 10.10.2.1 on eth1
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65000
+	BGP.next_hop: 10.10.2.1
+	BGP.local_pref: 100
+                     unicast [CtoB 21:38:44.073] (100) [AS65000i]
+	via 10.10.6.2 on eth3
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65001 65000
+	BGP.next_hop: 10.10.6.2
+	BGP.local_pref: 100
+                     unicast [CtoD 21:38:47.184] (100) [AS65000i]
+	via 10.10.4.2 on eth2
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65003 65001 65000
+	BGP.next_hop: 10.10.4.2
+	BGP.local_pref: 100
+2.2.2.0/24           unicast [CtoD 21:38:47.227] * (100) [AS65003i]
+	via 10.10.4.2 on eth2
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65003
+	BGP.next_hop: 10.10.4.2
+	BGP.local_pref: 100
+                     unicast [CtoB 21:38:44.073] (100) [AS65003i]
+	via 10.10.6.2 on eth3
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65001 65003
+	BGP.next_hop: 10.10.6.2
+	BGP.local_pref: 100
+                     unicast [CtoA 21:38:44.125] (100) [AS65003i]
+	via 10.10.2.1 on eth1
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65000 65001 65003
+	BGP.next_hop: 10.10.2.1
+	BGP.local_pref: 100
+3.3.3.0/24           unicast [CtoA 21:38:44.120] * (100) [AS65000i]
+	via 10.10.2.1 on eth1
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65000
+	BGP.next_hop: 10.10.2.1
+	BGP.local_pref: 100
+                     unicast [CtoB 21:38:44.073] (100) [AS65000i]
+	via 10.10.6.2 on eth3
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65001 65000
+	BGP.next_hop: 10.10.6.2
+	BGP.local_pref: 100
+                     unicast [CtoD 21:38:47.184] (100) [AS65000i]
+	via 10.10.4.2 on eth2
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65003 65001 65000
+	BGP.next_hop: 10.10.4.2
+	BGP.local_pref: 100
+4.4.4.0/24           unicast [CtoD 21:38:47.227] * (100) [AS65003i]
+	via 10.10.4.2 on eth2
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65003
+	BGP.next_hop: 10.10.4.2
+	BGP.local_pref: 100
+                     unicast [CtoB 21:38:44.073] (100) [AS65003i]
+	via 10.10.6.2 on eth3
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65001 65003
+	BGP.next_hop: 10.10.6.2
+	BGP.local_pref: 100
+                     unicast [CtoA 21:38:44.125] (100) [AS65003i]
+	via 10.10.2.1 on eth1
+	Type: BGP univ
+	BGP.origin: IGP
+	BGP.as_path: 65000 65001 65003
+	BGP.next_hop: 10.10.2.1
+	BGP.local_pref: 100
+---
+traceroute to 4.4.4.4 (4.4.4.4), 30 hops max, 60 byte packets
+ 1  10.10.0.1 (10.10.0.1)  0.302 ms  0.099 ms  0.123 ms
+ 2  10.10.2.2 (10.10.2.2)  0.156 ms  0.117 ms  0.138 ms
+ 3  10.10.6.2 (10.10.6.2)  0.154 ms  0.121 ms  0.122 ms
+ 4  10.10.3.2 (10.10.3.2)  0.256 ms  0.160 ms  0.147 ms
+ 5  4.4.4.4 (4.4.4.4)  0.264 ms  0.180 ms  0.173 ms

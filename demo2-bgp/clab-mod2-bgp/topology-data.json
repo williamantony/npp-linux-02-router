@@ -1,0 +1,295 @@
+{
+  "name": "mod2-bgp",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-b1042edb129a",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "lan1": {
+      "index": "0",
+      "shortname": "lan1",
+      "longname": "clab-mod2-bgp-lan1",
+      "fqdn": "lan1.mod2-bgp.io",
+      "group": "",
+      "labdir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/lan1",
+      "kind": "linux",
+      "image": "ekellercu/network-testing:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b1042edb129a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/lan1",
+        "clab-node-name": "lan1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/vagrant/npp-linux-02-router/demo2-bgp/diamond-mod2.clab.yml",
+        "containerlab": "mod2-bgp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "lan2": {
+      "index": "1",
+      "shortname": "lan2",
+      "longname": "clab-mod2-bgp-lan2",
+      "fqdn": "lan2.mod2-bgp.io",
+      "group": "",
+      "labdir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/lan2",
+      "kind": "linux",
+      "image": "ekellercu/network-testing:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b1042edb129a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/lan2",
+        "clab-node-name": "lan2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/vagrant/npp-linux-02-router/demo2-bgp/diamond-mod2.clab.yml",
+        "containerlab": "mod2-bgp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rtrA": {
+      "index": "2",
+      "shortname": "rtrA",
+      "longname": "clab-mod2-bgp-rtrA",
+      "fqdn": "rtrA.mod2-bgp.io",
+      "group": "",
+      "labdir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/rtrA",
+      "kind": "linux",
+      "image": "ekellercu/network-testing:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b1042edb129a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/rtrA",
+        "clab-node-name": "rtrA",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/vagrant/npp-linux-02-router/demo2-bgp/diamond-mod2.clab.yml",
+        "containerlab": "mod2-bgp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rtrB": {
+      "index": "3",
+      "shortname": "rtrB",
+      "longname": "clab-mod2-bgp-rtrB",
+      "fqdn": "rtrB.mod2-bgp.io",
+      "group": "",
+      "labdir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/rtrB",
+      "kind": "linux",
+      "image": "ekellercu/network-testing:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b1042edb129a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/rtrB",
+        "clab-node-name": "rtrB",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/vagrant/npp-linux-02-router/demo2-bgp/diamond-mod2.clab.yml",
+        "containerlab": "mod2-bgp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rtrC": {
+      "index": "4",
+      "shortname": "rtrC",
+      "longname": "clab-mod2-bgp-rtrC",
+      "fqdn": "rtrC.mod2-bgp.io",
+      "group": "",
+      "labdir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/rtrC",
+      "kind": "linux",
+      "image": "ekellercu/network-testing:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b1042edb129a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/rtrC",
+        "clab-node-name": "rtrC",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/vagrant/npp-linux-02-router/demo2-bgp/diamond-mod2.clab.yml",
+        "containerlab": "mod2-bgp"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rtrD": {
+      "index": "5",
+      "shortname": "rtrD",
+      "longname": "clab-mod2-bgp-rtrD",
+      "fqdn": "rtrD.mod2-bgp.io",
+      "group": "",
+      "labdir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/rtrD",
+      "kind": "linux",
+      "image": "ekellercu/network-testing:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-b1042edb129a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/vagrant/npp-linux-02-router/demo2-bgp/clab-mod2-bgp/rtrD",
+        "clab-node-name": "rtrD",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/vagrant/npp-linux-02-router/demo2-bgp/diamond-mod2.clab.yml",
+        "containerlab": "mod2-bgp"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "lan1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:cc:1a:35",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rtrA",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ee:8c:76",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "rtrA",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:01:34:e2",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rtrB",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:64:c8:bf",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "rtrA",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:1c:19:98",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rtrC",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f8:d7:3d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "rtrB",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:24:ef:b7",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rtrC",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:59:be:c9",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "rtrD",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:43:2b:49",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rtrB",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:89:f6:cd",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "rtrD",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:ba:b6:4d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rtrC",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:c5:ea:c1",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "lan2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:11:b4:57",
+        "peer": "z"
+      },
+      "z": {
+        "node": "rtrD",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:ba:db:9e",
+        "peer": "a"
+      }
+    }
+  ]
+}
